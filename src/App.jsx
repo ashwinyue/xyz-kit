@@ -131,7 +131,7 @@ function App() {
           outline-none font-mono"
         style={{ 
           fontFamily: 'JetBrains Mono, monospace',
-          borderRadius: '7px 0 0 7px'
+          borderRadius: '7px'
         }}
         onFocus={(e) => {
           e.currentTarget.style.borderColor = '#8070d4';
