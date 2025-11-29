@@ -5,6 +5,10 @@ weight: 3
 
 # 常见问题
 
+{{< callout type="warning" >}}
+  如果你的问题没有在这里找到答案，请[提交 Issue](https://github.com/ashwinyue/xyz-kit/issues)
+{{< /callout >}}
+
 ## 安装相关
 
 ### Q: macOS 提示"无法打开，因为它来自身份不明的开发者"

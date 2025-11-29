@@ -5,6 +5,10 @@ weight: 4
 
 # 开发环境搭建
 
+{{< callout type="info" >}}
+  本指南将帮助你搭建 xyz-kit 的开发环境
+{{< /callout >}}
+
 本指南将帮助你搭建 xyz-kit 的开发环境。
 
 ## 系统要求

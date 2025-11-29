@@ -5,6 +5,10 @@ weight: 2
 
 # 快速上手
 
+{{< callout emoji="🚀" >}}
+  5 分钟学会使用 xyz-kit 的核心功能
+{{< /callout >}}
+
 本指南将帮助你快速了解 xyz-kit 的基本使用方法。
 
 ## 启动应用

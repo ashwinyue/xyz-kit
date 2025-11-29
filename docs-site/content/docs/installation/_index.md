@@ -1,16 +1,15 @@
 ---
 title: "安装指南"
 weight: 1
-bookToc: true
 ---
 
 # 安装指南
 
-{{< hint info >}}
-**快速下载**: 访问 [Releases 页面](https://github.com/ashwinyue/xyz-kit/releases/latest) 获取最新版本
-{{< /hint >}}
+{{< callout type="info" >}}
+  **快速下载**: 访问 [Releases 页面](https://github.com/ashwinyue/xyz-kit/releases/latest) 获取最新版本
+{{< /callout >}}
 
-## 📋 系统要求
+## 系统要求
 
 ### macOS
 - macOS 10.13 或更高版本
@@ -20,7 +19,7 @@ bookToc: true
 - Windows 10 或更高版本
 - x64 架构处理器
 
-## 📦 下载安装包
+## 下载安装包
 
 | 平台 | 架构 | 文件名 |
 |------|------|--------|
