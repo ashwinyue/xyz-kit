@@ -44,13 +44,6 @@ pub fn run() {
             
             // Hide window after initialization
             if let Some(window) = app.get_webview_window("main") {
-                // Windows specific: remove window border/shadow
-                #[cfg(target_os = "windows")]
-                {
-                    use window_vibrancy::apply_mica;
-                    let _ = apply_mica(&window, None);
-                }
-                
                 let _ = window.hide();
             }
             
