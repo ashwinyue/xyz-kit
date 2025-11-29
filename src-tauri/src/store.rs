@@ -10,7 +10,7 @@ pub struct Preferences {
 }
 
 fn default_enabled_functions() -> Vec<String> {
-    vec!["id-join".to_string()]
+    vec!["id-join".to_string(), "duckduckgo".to_string()]
 }
 
 impl Default for Preferences {

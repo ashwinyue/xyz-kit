@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="23" fill="#DE5833"/>
+  
+  <!-- Duck body (white) -->
+  <ellipse cx="24" cy="27" rx="13" ry="11" fill="#FFFFFF"/>
+  
+  <!-- Duck head (white) -->
+  <circle cx="24" cy="19" r="7.5" fill="#FFFFFF"/>
+  
+  <!-- Left eye -->
+  <circle cx="21.5" cy="18" r="1.8" fill="#333333"/>
+  <circle cx="22" cy="17.5" r="0.7" fill="#FFFFFF"/>
+  
+  <!-- Right eye -->
+  <circle cx="26.5" cy="18" r="1.8" fill="#333333"/>
+  <circle cx="27" cy="17.5" r="0.7" fill="#FFFFFF"/>
+  
+  <!-- Beak -->
+  <ellipse cx="24" cy="21" rx="2.5" ry="1.8" fill="#F8991D"/>
+  
+  <!-- Bow tie - left -->
+  <path d="M 17 27 L 22 28.5 L 17 30 Z" fill="#66C748"/>
+  
+  <!-- Bow tie - right -->
+  <path d="M 31 27 L 26 28.5 L 31 30 Z" fill="#66C748"/>
+  
+  <!-- Bow tie - center knot -->
+  <ellipse cx="24" cy="28.5" rx="2" ry="1.5" fill="#66C748"/>
+</svg>

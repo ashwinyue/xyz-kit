@@ -13,11 +13,18 @@ pub struct TextProcessor;
 
 impl TextProcessor {
     pub fn get_functions() -> Vec<ProcessFunc> {
-        vec![ProcessFunc {
-            name: "id-join".to_string(),
-            describe: "ID拼接".to_string(),
-            next_step: "id-join".to_string(),
-        }]
+        vec![
+            ProcessFunc {
+                name: "id-join".to_string(),
+                describe: "ID拼接".to_string(),
+                next_step: "id-join".to_string(),
+            },
+            ProcessFunc {
+                name: "duckduckgo".to_string(),
+                describe: "DuckDuckGo搜索".to_string(),
+                next_step: "duckduckgo".to_string(),
+            },
+        ]
     }
 
     /// ID Join: transforms ID lists between formats
@@ -58,6 +65,32 @@ impl TextProcessor {
             // Comma -> Quoted: 1,2,3 -> "1","2","3"
             format!(r#""{}""#, text.replace(',', r#"",""#))
         }
+    }
+
+    /// DuckDuckGo Search: opens browser with search query
+    pub fn duckduckgo_search(text: &str) -> Result<(), String> {
+        let query = urlencoding::encode(text.trim());
+        let url = format!("https://duckduckgo.com/?q={}", query);
+        
+        #[cfg(target_os = "macos")]
+        std::process::Command::new("open")
+            .arg(&url)
+            .spawn()
+            .map_err(|e| e.to_string())?;
+        
+        #[cfg(target_os = "windows")]
+        std::process::Command::new("cmd")
+            .args(&["/C", "start", &url])
+            .spawn()
+            .map_err(|e| e.to_string())?;
+        
+        #[cfg(target_os = "linux")]
+        std::process::Command::new("xdg-open")
+            .arg(&url)
+            .spawn()
+            .map_err(|e| e.to_string())?;
+        
+        Ok(())
     }
 
     #[allow(dead_code)]

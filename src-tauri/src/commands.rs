@@ -28,6 +28,10 @@ pub fn process_text(text: String, func_name: String) -> Result<String, String> {
     let lines: Vec<&str> = text.lines().collect();
     let result = match func_name.as_str() {
         "id-join" => TextProcessor::id_join(&text, &lines),
+        "duckduckgo" => {
+            TextProcessor::duckduckgo_search(&text)?;
+            text // 返回原文本，因为已经打开浏览器
+        },
         _ => return Err(format!("Unknown function: {}", func_name)),
     };
 
