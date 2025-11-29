@@ -12,9 +12,6 @@ hero:
     - theme: alt
       text: 了解特性
       link: /guide/quick-start
-  image:
-    src: /hero-image.svg
-    alt: xyz-kit
 
 features:
   - icon: 
