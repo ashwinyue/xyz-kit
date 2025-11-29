@@ -1,6 +1,20 @@
 # xyz-kit - 轻量级文本处理工具
 
+[![Release](https://img.shields.io/github/v/release/ashwinyue/xyz-kit)](https://github.com/ashwinyue/xyz-kit/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/ashwinyue/xyz-kit/total)](https://github.com/ashwinyue/xyz-kit/releases)
+[![License](https://img.shields.io/github/license/ashwinyue/xyz-kit)](LICENSE)
+
 一个基于 Tauri + React 构建的桌面文本处理工具，专为开发者设计，提供快速的 ID 格式转换功能。
+
+## 📥 下载
+
+前往 [Releases 页面](https://github.com/ashwinyue/xyz-kit/releases/latest) 下载最新版本：
+
+- **macOS**: 
+  - Apple Silicon (M1/M2/M3): `xyz-kit_*_aarch64.dmg`
+  - Intel: `xyz-kit_*_x86_64.dmg`
+- **Windows**: 
+  - 安装版: `xyz-kit_*_x64-setup.exe` 或 `.msi`
 
 ## ✨ 特性
 
