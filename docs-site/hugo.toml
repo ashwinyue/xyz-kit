@@ -1,24 +1,46 @@
 baseURL = 'https://ashwinyue.github.io/xyz-kit/'
 languageCode = 'zh-cn'
-title = 'xyz-kit 文档'
-theme = 'hugo-book'
+title = 'xyz-kit'
+theme = 'hextra'
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.112.0"
 
 [params]
-  BookTheme = 'auto'
-  BookToC = true
-  BookRepo = 'https://github.com/ashwinyue/xyz-kit'
-  BookEditPath = 'edit/main/docs-site/content'
-  BookSearch = true
-  BookComments = false
-  BookPortableLinks = true
-  BookServiceWorker = true
+  description = "轻量级文本处理工具"
+  
+  [params.navbar]
+    displayTitle = true
+    displayLogo = false
+    
+    [[params.navbar.menu]]
+      name = "文档"
+      pageRef = "/docs"
+      weight = 1
+    
+    [[params.navbar.menu]]
+      name = "GitHub"
+      url = "https://github.com/ashwinyue/xyz-kit"
+      weight = 2
+      
+    [[params.navbar.menu]]
+      name = "下载"
+      url = "https://github.com/ashwinyue/xyz-kit/releases/latest"
+      weight = 3
 
-[menu]
-  [[menu.before]]
-    name = 'GitHub'
-    url = 'https://github.com/ashwinyue/xyz-kit'
-    weight = 1
-  [[menu.before]]
-    name = '下载'
-    url = 'https://github.com/ashwinyue/xyz-kit/releases/latest'
-    weight = 2
+  [params.footer]
+    displayCopyright = true
+    displayPoweredBy = false
+
+  [params.theme]
+    default = "system"
+    displayToggle = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
