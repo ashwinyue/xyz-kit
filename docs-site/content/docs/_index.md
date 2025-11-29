@@ -8,10 +8,10 @@ linkTitle: "文档"
 ## 快速导航
 
 {{< cards >}}
-  {{< card link="installation" title="安装指南" icon="download" >}}
-  {{< card link="quick-start" title="快速上手" icon="rocket" >}}
+  {{< card link="installation" title="安装指南" icon="arrow-down-tray" >}}
+  {{< card link="quick-start" title="快速上手" icon="bolt" >}}
   {{< card link="faq" title="常见问题" icon="question-mark-circle" >}}
-  {{< card link="development" title="开发文档" icon="code" >}}
+  {{< card link="development" title="开发文档" icon="code-bracket" >}}
 {{< /cards >}}
 
 ## 特性概览
