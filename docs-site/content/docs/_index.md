@@ -8,10 +8,10 @@ linkTitle: "文档"
 ## 快速导航
 
 {{< cards >}}
-  {{< card link="installation" title="安装指南" icon="arrow-down-tray" >}}
-  {{< card link="quick-start" title="快速上手" icon="bolt" >}}
-  {{< card link="faq" title="常见问题" icon="question-mark-circle" >}}
-  {{< card link="development" title="开发文档" icon="code-bracket" >}}
+  {{< card link="installation" title="📦 安装指南" subtitle="下载并安装 xyz-kit" >}}
+  {{< card link="quick-start" title="🚀 快速上手" subtitle="5 分钟学会使用" >}}
+  {{< card link="faq" title="❓ 常见问题" subtitle="解决使用中的问题" >}}
+  {{< card link="development" title="💻 开发文档" subtitle="搭建开发环境" >}}
 {{< /cards >}}
 
 ## 特性概览
