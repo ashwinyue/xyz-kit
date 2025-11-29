@@ -56,7 +56,7 @@ npm install
 ### 开发模式
 
 ```bash
-npm run dev
+npm run tauri dev
 ```
 
 ### 构建应用
