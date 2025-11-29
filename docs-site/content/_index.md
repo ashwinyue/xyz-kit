@@ -1,6 +1,24 @@
 ---
-title: "xyz-kit 文档"
-description: "轻量级文本处理工具"
+title: "xyz-kit"
+type: docs
+---
+
+# xyz-kit
+
+{{< columns >}}
+
+## 🚀 轻量级文本处理工具
+
+专为开发者设计的桌面应用，提供快速的 ID 格式转换功能。
+
+<--->
+
+## 📥 快速下载
+
+[![下载](https://img.shields.io/github/v/release/ashwinyue/xyz-kit?style=for-the-badge)](https://github.com/ashwinyue/xyz-kit/releases/latest)
+
+{{< /columns >}}
+
 ---
 
 # 欢迎使用 xyz-kit
