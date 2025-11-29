@@ -122,7 +122,7 @@ function App() {
   }, [hideWindow, processText]);
 
   return (
-    <div className="h-screen flex">
+    <div className="h-screen flex bg-transparent">
       <div
         ref={textAreaRef}
         contentEditable
