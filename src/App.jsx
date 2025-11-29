@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { getCurrentWindow } from "@tauri-apps/api/window";
+import { listen } from "@tauri-apps/api/event";
 import { useAppStore } from "./store/useAppStore";
 import FunctionBar from "./components/FunctionBar";
 import EnterButton from "./components/EnterButton";
@@ -23,6 +24,12 @@ function App() {
     console.log("App mounted, setting up listeners");
     loadFunctions();
     loadClipboard();
+
+    // 监听功能更新事件
+    const unlisten = listen("functions-updated", () => {
+      console.log("Functions updated, reloading...");
+      loadFunctions();
+    });
 
     // 暴露全局函数供后端调用
     window.__reloadClipboard = async () => {
@@ -60,6 +67,7 @@ function App() {
 
     return () => {
       delete window.__reloadClipboard;
+      unlisten.then(fn => fn());
     };
   }, [loadFunctions, loadClipboard]);
 
@@ -82,17 +90,32 @@ function App() {
       }
     };
 
-    // 窗口失去焦点时自动隐藏
+    // 窗口失去焦点时延迟隐藏，避免快捷键唤醒时立即隐藏
+    let blurTimer = null;
     const handleBlur = () => {
-      hideWindow();
+      blurTimer = setTimeout(() => {
+        hideWindow();
+      }, 200);
+    };
+
+    const handleFocus = () => {
+      if (blurTimer) {
+        clearTimeout(blurTimer);
+        blurTimer = null;
+      }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("blur", handleBlur);
+    window.addEventListener("focus", handleFocus);
     
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("blur", handleBlur);
+      window.removeEventListener("focus", handleFocus);
+      if (blurTimer) {
+        clearTimeout(blurTimer);
+      }
     };
   }, [hideWindow, processText]);
 

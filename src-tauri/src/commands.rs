@@ -54,6 +54,24 @@ pub fn set_skip_list(list: Vec<String>, state: State<AppState>) -> Result<(), St
     store.save()
 }
 
+#[tauri::command]
+pub fn get_enabled_functions(state: State<AppState>) -> Vec<String> {
+    state.store.lock().unwrap().get_enabled_functions().clone()
+}
+
+#[tauri::command]
+pub fn is_function_enabled(func_name: String, state: State<AppState>) -> bool {
+    state.store.lock().unwrap().is_function_enabled(&func_name)
+}
+
+#[tauri::command]
+pub fn toggle_function(func_name: String, state: State<AppState>) -> Result<bool, String> {
+    let mut store = state.store.lock().unwrap();
+    let enabled = store.toggle_function(func_name);
+    store.save()?;
+    Ok(enabled)
+}
+
 // Window commands
 #[tauri::command]
 pub fn hide_window(window: Window) -> Result<(), String> {

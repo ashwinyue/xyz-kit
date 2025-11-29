@@ -7,10 +7,10 @@ pub fn register_shortcuts(app: &AppHandle) -> Result<(), Box<dyn std::error::Err
 
     app.global_shortcut().on_shortcut(shortcut, |app, _shortcut, _event| {
         if let Some(window) = app.get_webview_window("main") {
-            // Show window
-            let _ = window.center();
+            let _ = window.unminimize();
             let _ = window.show();
             let _ = window.set_focus();
+            let _ = window.center();
             
             // Execute JavaScript to reload clipboard
             let _ = window.eval("window.__reloadClipboard && window.__reloadClipboard()");

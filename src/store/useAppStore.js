@@ -7,6 +7,7 @@ export const useAppStore = create((set, get) => ({
   selectedFunc: "id-join",
   functions: [],
   skipList: [],
+  enabledFunctions: [],
 
   // Actions
   setText: (text) => set({ text }),
@@ -14,8 +15,15 @@ export const useAppStore = create((set, get) => ({
   setSelectedFunc: (funcName) => set({ selectedFunc: funcName }),
 
   loadFunctions: async () => {
-    const functions = await api.getFunctions();
-    set({ functions });
+    const [functions, enabledFunctions] = await Promise.all([
+      api.getFunctions(),
+      api.getEnabledFunctions(),
+    ]);
+    // 只显示已启用的功能
+    const filteredFunctions = functions.filter(func => 
+      enabledFunctions.includes(func.name)
+    );
+    set({ functions: filteredFunctions, enabledFunctions });
   },
 
   loadSkipList: async () => {

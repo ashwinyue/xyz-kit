@@ -2,9 +2,24 @@ use serde::{Deserialize, Serialize};
 use std::fs;
 use std::path::PathBuf;
 
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Preferences {
     pub skip_list: Vec<String>,
+    #[serde(default = "default_enabled_functions")]
+    pub enabled_functions: Vec<String>,
+}
+
+fn default_enabled_functions() -> Vec<String> {
+    vec!["id-join".to_string()]
+}
+
+impl Default for Preferences {
+    fn default() -> Self {
+        Self {
+            skip_list: Vec::new(),
+            enabled_functions: default_enabled_functions(),
+        }
+    }
 }
 
 pub struct PreferenceStore {
@@ -58,6 +73,24 @@ impl PreferenceStore {
 
     pub fn set_skip_list(&mut self, list: Vec<String>) {
         self.preferences.skip_list = list;
+    }
+
+    pub fn get_enabled_functions(&self) -> &Vec<String> {
+        &self.preferences.enabled_functions
+    }
+
+    pub fn is_function_enabled(&self, func_name: &str) -> bool {
+        self.preferences.enabled_functions.contains(&func_name.to_string())
+    }
+
+    pub fn toggle_function(&mut self, func_name: String) -> bool {
+        if let Some(pos) = self.preferences.enabled_functions.iter().position(|x| x == &func_name) {
+            self.preferences.enabled_functions.remove(pos);
+            false
+        } else {
+            self.preferences.enabled_functions.push(func_name);
+            true
+        }
     }
 }
 

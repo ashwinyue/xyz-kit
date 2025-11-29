@@ -8,6 +8,9 @@ export const api = {
   getFunctions: () => invoke("get_functions"),
   getSkipList: () => invoke("get_skip_list"),
   setSkipList: (list) => invoke("set_skip_list", { list }),
+  getEnabledFunctions: () => invoke("get_enabled_functions"),
+  isFunctionEnabled: (funcName) => invoke("is_function_enabled", { funcName }),
+  toggleFunction: (funcName) => invoke("toggle_function", { funcName }),
   hideWindow: () => invoke("hide_window"),
   showWindow: () => invoke("show_window"),
 };
