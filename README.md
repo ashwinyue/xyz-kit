@@ -62,10 +62,12 @@ npm run dev
 ### 构建应用
 
 ```bash
-npm run build
+npm run tauri build
 ```
 
-构建完成后，安装包位于 `src-tauri/target/release/bundle/` 目录。
+构建完成后，安装包位于 `src-tauri/target/release/bundle/` 目录：
+- **macOS**: `dmg/` 目录下的 `.dmg` 文件
+- **Windows**: `msi/` 或 `nsis/` 目录下的 `.msi` 或 `.exe` 文件
 
 ## 📖 使用方法
 
