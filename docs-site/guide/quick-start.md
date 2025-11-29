@@ -166,6 +166,6 @@ orange
 
 ## 下一步
 
-- 查看[功能详解](ID-Format-Conversion)了解更多转换规则
-- 查看[快捷键说明](Keyboard-Shortcuts)了解所有快捷键
-- 查看[常见问题](FAQ)解决使用中的问题
+- 查看[常见问题](./faq)解决使用中的问题
+- 查看[开发文档](./development)了解如何参与开发
+- 访问 [GitHub](https://github.com/ashwinyue/xyz-kit) 查看源代码
