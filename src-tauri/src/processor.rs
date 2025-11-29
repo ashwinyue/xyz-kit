@@ -13,11 +13,18 @@ pub struct TextProcessor;
 
 impl TextProcessor {
     pub fn get_functions() -> Vec<ProcessFunc> {
-        vec![ProcessFunc {
-            name: "id-join".to_string(),
-            describe: "ID拼接".to_string(),
-            next_step: "id-join".to_string(),
-        }]
+        vec![
+            ProcessFunc {
+                name: "id-join".to_string(),
+                describe: "ID拼接".to_string(),
+                next_step: "id-join".to_string(),
+            },
+            ProcessFunc {
+                name: "search".to_string(),
+                describe: "快速搜索".to_string(),
+                next_step: "search".to_string(),
+            },
+        ]
     }
 
     /// ID Join: transforms ID lists between formats

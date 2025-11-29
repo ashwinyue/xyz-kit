@@ -6,6 +6,7 @@ mod processor;
 mod shortcut;
 mod store;
 mod tray;
+mod search;
 
 use commands::AppState;
 use store::PreferenceStore;
@@ -36,6 +37,7 @@ pub fn run() {
             commands::hide_window,
             commands::show_window,
             commands::show_window_at_cursor,
+            search::search_duckduckgo,
         ])
         .plugin(tauri_plugin_global_shortcut::Builder::new().build())
         .setup(|app| {

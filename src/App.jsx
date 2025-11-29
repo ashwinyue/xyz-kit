@@ -4,9 +4,11 @@ import { listen } from "@tauri-apps/api/event";
 import { useAppStore } from "./store/useAppStore";
 import FunctionBar from "./components/FunctionBar";
 import EnterButton from "./components/EnterButton";
+import SearchDialog from "./components/SearchDialog";
 
 function App() {
   const textAreaRef = useRef(null);
+  const [searchOpen, setSearchOpen] = useState(false);
   
   const {
     text,
@@ -145,12 +147,17 @@ function App() {
           functions={functions}
           selected={selectedFunc}
           onSelect={(funcName) => {
-            setSelectedFunc(funcName);
-            processText(); // 点击图标立即执行处理
+            if (funcName === 'search') {
+              setSearchOpen(true);
+            } else {
+              setSelectedFunc(funcName);
+              processText(); // 点击图标立即执行处理
+            }
           }}
         />
       </div>
       <EnterButton onClick={processText} />
+      <SearchDialog isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </div>
   );
 }
