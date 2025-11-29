@@ -3,21 +3,74 @@ title: "xyz-kit"
 type: docs
 ---
 
-# xyz-kit
+<div class="book-brand">xyz-kit</div>
 
-{{< columns >}}
+# 轻量级文本处理工具，开箱即用的 ID 格式转换
 
-## 🚀 轻量级文本处理工具
+<div class="book-subtitle">开箱即用 • 业务聚焦 • 生产就绪</div>
 
-专为开发者设计的桌面应用，提供快速的 ID 格式转换功能。
+<a href="https://github.com/ashwinyue/xyz-kit/releases/latest" class="book-btn-primary">快速开始</a>
+<a href="/xyz-kit/docs/installation/" class="book-btn-secondary">了解特性</a>
 
-<--->
+---
 
-## 📥 快速下载
+<div class="feature-cards">
 
-[![下载](https://img.shields.io/github/v/release/ashwinyue/xyz-kit?style=for-the-badge)](https://github.com/ashwinyue/xyz-kit/releases/latest)
+<div class="feature-card">
+<div class="icon">📋</div>
 
-{{< /columns >}}
+### 清晰的架构设计
+
+采用 Tauri + React 架构，支持跨平台部署，开箱即用。
+
+</div>
+
+<div class="feature-card">
+<div class="icon">🚀</div>
+
+### 工程能力完备
+
+内置全局快捷键、自动化剪贴板、系统托盘等核心功能。
+
+</div>
+
+<div class="feature-card">
+<div class="icon">💎</div>
+
+### 技术栈齐全
+
+Rust、React、Zustand 等核心组件，并开箱即用。
+
+</div>
+
+<div class="feature-card">
+<div class="icon">🔧</div>
+
+### 生产级品质
+
+经过优化的性能，轻量级设计，常驻系统托盘。
+
+</div>
+
+<div class="feature-card">
+<div class="icon">🌐</div>
+
+### 跨平台支持
+
+支持 macOS (Apple Silicon & Intel) 和 Windows 平台。
+
+</div>
+
+<div class="feature-card">
+<div class="icon">📦</div>
+
+### 业务聚焦
+
+专注于 ID 格式转换，自动识别并转换多种格式。
+
+</div>
+
+</div>
 
 ---
 
