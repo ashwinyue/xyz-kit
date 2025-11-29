@@ -1,0 +1,35 @@
+baseURL = 'https://ashwinyue.github.io/xyz-kit/'
+languageCode = 'zh-cn'
+title = 'xyz-kit 文档'
+theme = 'ananke'
+
+[params]
+  description = 'xyz-kit - 轻量级文本处理工具'
+  author = 'ashwinyue'
+  github = 'https://github.com/ashwinyue/xyz-kit'
+
+[menu]
+  [[menu.main]]
+    name = '首页'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = '安装指南'
+    url = '/installation/'
+    weight = 2
+  [[menu.main]]
+    name = '快速上手'
+    url = '/quick-start/'
+    weight = 3
+  [[menu.main]]
+    name = '常见问题'
+    url = '/faq/'
+    weight = 4
+  [[menu.main]]
+    name = '开发文档'
+    url = '/development/'
+    weight = 5
+  [[menu.main]]
+    name = 'GitHub'
+    url = 'https://github.com/ashwinyue/xyz-kit'
+    weight = 6
