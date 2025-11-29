@@ -127,11 +127,11 @@ function App() {
         suppressContentEditableWarning
         onInput={(e) => setText(e.currentTarget.textContent)}
         className="flex-1 bg-[#f0f8ff] overflow-auto whitespace-pre-wrap break-all p-1.5 
-          border-l-2 border-t-2 border-b-2 border-[rgba(3,102,214,0.3)]
+          border-l-2 border-t-2 border-b-2 border-r-2 border-[rgba(3,102,214,0.3)]
           outline-none font-mono"
         style={{ 
           fontFamily: 'JetBrains Mono, monospace',
-          borderRadius: '7px 0 7px 7px'
+          borderRadius: '7px 0 0 7px'
         }}
         onFocus={(e) => {
           e.currentTarget.style.borderColor = '#8070d4';
