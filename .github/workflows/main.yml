@@ -46,7 +46,14 @@ jobs:
         env:
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
-        
+      - name: Generate Windows icon
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "src-tauri/icons/icon.ico")) {
+            Write-Host "Copying icon.png as icon.ico"
+            Copy-Item "src-tauri/icons/icon.png" "src-tauri/icons/icon.ico"
+          }
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
