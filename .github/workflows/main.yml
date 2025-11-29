@@ -40,7 +40,14 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
+
+      - name: Generate Windows icon
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "src-tauri/icons/icon.ico")) {
+            Write-Host "Copying icon.png as icon.ico"
+            Copy-Item "src-tauri/icons/icon.png" "src-tauri/icons/icon.ico"
+          }
       - name: Build Windows app
         run: npm run tauri build
         env:
