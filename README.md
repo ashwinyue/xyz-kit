@@ -8,13 +8,17 @@
 
 ## 📥 下载
 
-前往 [Releases 页面](https://github.com/ashwinyue/xyz-kit/releases/latest) 下载最新版本：
+[![下载最新版本](https://img.shields.io/badge/下载-最新版本-blue?style=for-the-badge)](https://github.com/ashwinyue/xyz-kit/releases/latest)
 
-- **macOS**: 
-  - Apple Silicon (M1/M2/M3): `xyz-kit_*_aarch64.dmg`
-  - Intel: `xyz-kit_*_x86_64.dmg`
-- **Windows**: 
-  - 安装版: `xyz-kit_*_x64-setup.exe` 或 `.msi`
+### 安装包说明
+
+前往 [Releases 页面](https://github.com/ashwinyue/xyz-kit/releases/latest) 下载对应平台的安装包：
+
+| 平台 | 架构 | 文件名 |
+|------|------|--------|
+| macOS | Apple Silicon (M1/M2/M3) | `xyz-kit_*_aarch64.dmg` |
+| macOS | Intel | `xyz-kit_*_x86_64.dmg` |
+| Windows | x64 | `xyz-kit_*_x64-setup.exe` 或 `.msi` |
 
 ## ✨ 特性
 
