@@ -246,6 +246,6 @@ cargo clean
 
 ## 下一步
 
-- 查看[项目架构](Architecture)了解代码组织
-- 查看[贡献指南](Contributing)了解如何提交代码
-- 查看[构建与发布](Build-and-Release)了解发布流程
+- 访问 [GitHub 仓库](https://github.com/ashwinyue/xyz-kit) 查看源代码
+- 查看 [Issues](https://github.com/ashwinyue/xyz-kit/issues) 了解待解决的问题
+- 提交 [Pull Request](https://github.com/ashwinyue/xyz-kit/pulls) 贡献代码

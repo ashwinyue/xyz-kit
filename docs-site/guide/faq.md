@@ -156,7 +156,7 @@
 
 ### Q: 如何参与开发？
 
-**A**: 查看[贡献指南](Contributing)了解如何参与项目开发。
+**A**: 查看[开发文档](./development)了解如何参与项目开发，或直接在 [GitHub](https://github.com/ashwinyue/xyz-kit) 提交 Pull Request。
 
 ## 其他问题
 
